@@ -1,0 +1,20 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * AppModule module for Craft CMS
+ *
+ * AppModuleWidget Widget Body
+ *
+ * @author    Tim Kelty
+ * @copyright Copyright (c) 2018 Tim Kelty
+ * @link      http://fusionary.com
+ * @package   AppModule
+ * @since     1.0.0
+ */
+#}
+
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@app-module/assetbundles/appmodulewidgetwidget/dist', true) ~ '/img/AppModuleWidget-icon.svg' %}
+
+<img src="{{ iconUrl }}" height="64" width="64" />
+
+<p>{{ message }}</p>

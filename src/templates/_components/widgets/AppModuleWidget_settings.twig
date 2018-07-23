@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * AppModule module for Craft CMS
+ *
+ * AppModuleWidget Widget Settings
+ *
+ * @author    Tim Kelty
+ * @copyright Copyright (c) 2018 Tim Kelty
+ * @link      http://fusionary.com
+ * @package   AppModule
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("modules\\appmodule\\assetbundles\\appmodule\\AppModuleAsset") %}
+
+{{ forms.textField({
+    label: 'Message',
+    instructions: 'Enter a message here.',
+    id: 'message',
+    name: 'message',
+    value: widget['message']})
+}}
